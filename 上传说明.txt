@@ -1,0 +1,12 @@
+十二维灵感日历 v3.0 — 完全不需要API的导入版
+
+1. 将本文件夹中的 index.html、sw.js、manifest.webmanifest、icon.svg、data 文件夹、examples 文件夹上传到 GitHub 仓库根目录。覆盖旧的 index.html 和 sw.js。不要把压缩包本身上传，也不要套一层 twelve-inspirations-v3 文件夹。
+2. 核对仓库文件位置：index.html 应在最外层，data/issues.json 应在 data 文件夹，examples/示例文章.json 应在 examples 文件夹。
+3. 到 GitHub 仓库 Actions，找到“每日自动发布十二维”，点击右上 ... → Disable workflow（停用），因为它需要另外付费的 API，此网站不需要它。
+4. 打开 https://jocyc-dev.github.io/twelve-inspirations/ ，强制刷新（Ctrl+F5），点击“导入今天的合集”→“先体验示例”确认显示图片、链接、代码。
+5. 以后每天让 ChatGPT 在12栏日报后面附一份“可供十二维网站导入的 .json 文件”（包含 date、title、12个 items，每项含 title、body）。下载文件后，网站点击“导入今天的合集”→ 选文件。
+6. 要让网站上的同一篇文章同步到其他设备：点击“导出网站文章库”，下载 issues.json，然后上传覆盖仓库 data/issues.json。等待 GitHub Pages 重新部署，重新打开网站即可。
+7. 重要：导入后若不执行第6步，文章只保存在当前浏览器。不要清除站点数据。GitHub仓库是Public，上传的文章任何人都可查看。
+8. 示例文章只是导入格式演示，不是正式的2026-11-22日报。历史2026-11-19至21仅是目录摘要，不能冒充完整文章；要补齐需要另行制作完整JSON。
+
+限制：此方案不是全自动同步，没有额外API收费；ChatGPT富交互组件无法原样导出，但可以迁移文字、普通图片URL、链接和代码。网页仅对常用Markdown语法提供简化支持。
